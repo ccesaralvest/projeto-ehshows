@@ -1,0 +1,1564 @@
+/*Font ====================================== */
+@font-face{font-family:'allerbold';src:url('../fonts/eot/aller_bd-webfont.eot');src:url('../fonts/eot/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/woff2/aller_bd-webfont.woff2') format('woff2'),url('../fonts/woff/aller_bd-webfont.woff') format('woff'),url('../fonts/ttf/aller_bd-webfont.ttf') format('truetype'),url('../fonts/svg/aller_bd-webfont.svg#allerbold') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'allerbold_italic';src:url('../fonts/eot/aller_bdit-webfont.eot');src:url('../fonts/eot/aller_bdit-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/woff2/aller_bdit-webfont.woff2') format('woff2'),url('../fonts/woff/aller_bdit-webfont.woff') format('woff'),url('../fonts/ttf/aller_bdit-webfont.ttf') format('truetype'),url('../fonts/svg/aller_bdit-webfont.svg#allerbold_italic') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'alleritalic';src:url('../fonts/eot/aller_it-webfont.eot');src:url('../fonts/eot/aller_it-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/woff2/aller_it-webfont.woff2') format('woff2'),url('../fonts/woff/aller_it-webfont.woff') format('woff'),url('../fonts/ttf/aller_it-webfont.ttf') format('truetype'),url('../fonts/svg/aller_it-webfont.svg#alleritalic') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'aller_lightregular';src:url('../fonts/eot/aller_lt-webfont.eot');src:url('../fonts/eot/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/woff2/aller_lt-webfont.woff2') format('woff2'),url('../fonts/woff/aller_lt-webfont.woff') format('woff'),url('../fonts/ttf/aller_lt-webfont.ttf') format('truetype'),url('../fonts/svg/aller_lt-webfont.svg#aller_lightregular') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'aller_lightitalic';src:url('../fonts/eot/aller_ltit-webfont.eot');src:url('../fonts/eot/aller_ltit-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/woff2/aller_ltit-webfont.woff2') format('woff2'),url('../fonts/woff/aller_ltit-webfont.woff') format('woff'),url('../fonts/ttf/aller_ltit-webfont.ttf') format('truetype'),url('../fonts/svg/aller_ltit-webfont.svg#aller_lightitalic') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'allerregular';src:url('../fonts/eot/aller_rg-webfont.eot');src:url('../fonts/eot/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/woff2/aller_rg-webfont.woff2') format('woff2'),url('../fonts/woff/aller_rg-webfont.woff') format('woff'),url('../fonts/ttf/aller_rg-webfont.ttf') format('truetype'),url('../fonts/svg/aller_rg-webfont.svg#allerregular') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'aller_displayregular';src:url('../fonts/eot/allerdisplay-webfont.eot');src:url('../fonts/eot/allerdisplay-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/woff2/allerdisplay-webfont.woff2') format('woff2'),url('../fonts/woff/allerdisplay-webfont.woff') format('woff'),url('../fonts/ttf/allerdisplay-webfont.ttf') format('truetype'),url('../fonts/svg/allerdisplay-webfont.svg#aller_displayregular') format('svg');font-weight:normal;font-style:normal}
+/* End Font ===================================== */
+
+/*hack dos inputs for apple devices*/
+textarea, input[type=ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂtextÃƒÂ¢Ã¢â€šÂ¬Ã‚Â], input[type=ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂbuttonÃƒÂ¢Ã¢â€šÂ¬Ã‚Â], input[type=ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂsubmitÃƒÂ¢Ã¢â€šÂ¬Ã‚Â], input[type=ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂcheckboxÃƒÂ¢Ã¢â€šÂ¬Ã‚Â] {-webkit-appearance: none; border-radius: 0;}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+.menu-mobile {
+    display: none;
+    z-index: 9;
+}
+
+/*Menu ===*/
+.header-top .menu-desk {
+    background-color: #000000;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+}
+.header-top .menu-desk ul {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 11px 0 50px 0;
+}
+.header-top .menu-desk .sub-menu-desk {
+    display: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 5px 0 6px 0;
+    margin: 0 auto;
+    font-size: 15px;
+    background: #2B2B2B;
+    position: fixed;
+    left: 0;
+}
+.header-top .menu-desk .sub-menu-desk li {
+    display: inline;
+    width: 123px;
+    text-align: center;
+    float: none;
+}
+.header-top .menu-desk .sub-menu-desk li:first-child {
+    margin-right: 10px;
+}
+.header-top .menu-desk .sub-menu-desk li:last-child {
+    margin-left: 10px;
+}
+.header-top .menu-desk .sub-menu-desk li a {
+    font-family: "allerregular", Arial, Tahoma, Sans-serif;
+}
+.header-top .menu-desk ul li:first-child {
+    margin-top: 4px;
+    text-align: left;
+}
+.header-top .menu-desk ul li #logo-menu {
+    width: 119px;
+}
+.header-top .menu-desk ul li:first-child a {
+    padding-left: 5%;
+}
+.header-top .menu-desk ul li:last-child {
+    text-align: right;
+}
+.header-top .menu-desk ul li:last-child a {
+    padding-right: 5%;
+}
+.header-top .menu-desk ul li {
+    display: inline;
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+.header-top .menu-desk ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "allerbold", Arial, Tahoma, Sans-serif;
+    line-height: 41px;
+}
+.header-top .menu-desk #cadastrarTop {
+    width: 33px;
+    margin-right: 9px;
+    margin-bottom: -8px;
+}       
+nav.menu-desk.menu-flutuante {
+    background-color: #353535;
+}
+
+/*End Menu ===*/
+
+/*First Section*/
+#index-1 {
+    top: 153px;
+    position: relative;
+}
+.first-section {
+    padding-top: 100px;
+    background: url(../img/firstSection.png);
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    min-height: 839px;
+    position: relative;
+}
+.call {
+    max-width: 703px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'allerbold_italic';
+    font-size: 37px;
+}
+.call p {
+    font-size: 15px;
+    padding-top: 20px;
+    font-family: "allerregular", Arial, Tahoma, Sans-serif;
+}
+.call #cadastroBtn {
+    font-style: normal;
+    font-family: "allerregular", Arial, Tahoma, Sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+    border: solid 1px #8d2732;
+    color: #000;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+    width: 132px;
+    margin: 0 auto;
+    margin-top: 33px;
+}
+.call img {
+    margin-top: -30px;
+    width: 34%;
+}
+
+/*End First Section*/
+
+/*Second section O que ÃƒÆ’Ã‚Â© ================================================================*/
+#index-2 {
+    top: -58px;
+    position: relative;
+}
+#index-3 {
+    top: -60px;
+    position: relative;
+}
+.second-section {
+    background: url(../img/oQueE2.jpg);
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    min-height: 1005px;
+    margin-top: -11%;
+}
+.choice .stage {
+    width: 100%;
+}
+
+.whats-is {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 331px;
+    text-align: center;
+    font-family: 'allerbold_italic', Arial, Tahoma, Sans-serif;
+}
+.whats-is h2 {
+    font-family: "allerbold", Arial, Tahoma, Sans-serif;
+    font-size: 50px;
+    margin-bottom: 39px;
+    display: none;
+}
+.bounceInLeft {
+    display: block!important;
+}
+
+
+.whats-is p {
+    font-family: "allerregular", Arial, Tahoma, Sans-serif;
+    display: none;
+}
+.bounceInRight {
+    display: block!important;
+}
+.whats-is p:nth-child(n+2) {
+    margin-top: 20px;
+    line-height: 23px;
+}
+.im-artist a, .want-hire a {
+    margin-top: 100px;
+    font-family: 'allerbold_italic', Arial, Tahoma, Sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    text-align: left;
+    float: left;
+}
+.im-artist img, .want-hire img {
+    float: left;
+    margin-right: 11px;
+    margin-top: -13px;
+}
+.want-hire img {
+    float: right;
+    margin-left: 10px;
+}
+.want-hire a {
+    float: right;
+}
+.choice {
+    margin-top: -15px;
+    width: 100%;
+    display: none;
+}
+.want-hire, .im-artist {
+    width: 50%;
+    display: inline;
+    float: left;
+}
+
+/* End Second section O que ÃƒÆ’Ã‚Â© ================================================================*/
+
+/*Section como funciona ================================================================*/
+.third-section {
+    background: url(../img/comoFuncionaComprador2.png);
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    min-height: 925px;
+    position: relative;
+}
+.how-works {
+    max-width: 796px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "aller", Arial, Tahoma, Sans-serif;
+    padding-top: 36px;
+    /* float: left; */
+    margin: 0 auto;
+}
+.how-works h2 {
+    font-size: 60px;
+    text-align: center;
+    font-family: "allerbold", Arial, Tahoma, Sans-serif;
+    color: #fff;
+}
+.ball {
+    display: none;
+}
+.bounceInUp {
+    display: block;
+}
+.ball-1, .ball-2, .ball-3, .ball-4 {
+    font-family: "allerregular", Arial, Tahoma, Sans-serif;
+}
+.ball-1 {
+    background: url(../img/ball-1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 245px;
+    padding-top: 102px;
+    padding-bottom: 20px;
+    float: right;
+    height: 120px;
+    color: #fff;
+    text-align: center;
+    margin-left: 85px;
+    margin-top: 22px;
+}
+.ball-1 p {
+    width: 188px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 23px;
+}
+.ball-2 {
+    background: url(../img/ball-2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 245px;
+    padding-top: 103px;
+    padding-bottom: 20px;
+    float: left;
+    height: 104px;
+    color: #fff;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: 62px;
+}
+.ball-2 p {
+    width: 195px;
+    margin: 0 auto;
+    line-height: 25px;
+}
+.ball-3 {
+    background: url(../img/ball-3.png);
+    background-size: 100%;
+    width: 233px;
+    padding-top: 92px;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+    float: left;
+    height: 116px;
+    color: #fff;
+    text-align: center;
+}
+.ball-3 p {
+    width: 159px;
+    margin: 0 auto;
+    line-height: 27px;
+}
+.ball-3 p span {
+    color: #f1592a;
+    font-size: 20px;
+    font-weight: bold;
+}
+.ball-4 {
+    background: url(../img/ball-4.png);
+    background-size: 100%;
+    width: 245px;
+    background-repeat: no-repeat;
+    padding-top: 81px;
+    padding-bottom: 20px;
+    float: left;
+    height: 149px;
+    color: #fff;
+    text-align: center;
+    margin-top: -168px;
+}
+.ball-4 p {
+    width: 206px;
+    line-height: 25px;
+    margin: 0 auto;
+}
+
+/*End Section como funciona*/
+
+/*Section vantagens*/
+.fourth-section {
+    background: url(../img/vantagens-sem-vetor.jpg);
+    /*background: url(../img/vantagens.jpg);*/
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    max-height: 876px;
+    background-repeat: no-repeat;
+    margin-top: -9%;    /* position: relative; */
+}
+.fourth-section h2 {
+    font-size: 60px;
+    text-align: right;
+    /* top: 2744px; */
+    margin-top: -10%;
+    float: right;
+    /* right: 16%; */
+    margin-right: 13%;
+    /* position: absolute; */
+    font-family: "allerbold", Arial, Tahoma, Sans-serif;
+    color: #000;
+}
+.slider-vantagens {
+    max-width: 500px;
+    width: 100%;
+    height: 62px;
+    margin-left: 8%;
+    margin-top: -24%;
+    top: 0;
+    bottom: 0;
+}
+.vantagens-vetor {
+    width: 100%;
+    margin-top: 7%;
+    /* position: relative; */
+}
+.slider-vantagens ul li {
+    margin-bottom: 19px;
+    font-family: "allerregular", Arial, Tahoma, Sans-serif;
+}
+.slider-vantagens ul li:after {
+    content: "";
+    font-size: 16px;
+    width: 200px;
+    display: block;
+    padding-top: 13px;
+    border-bottom: solid 1px #000;
+}
+.slider-vantagens ul li:last-child:after {
+    border: none;
+}
+.artista {
+    display: none;
+}
+/*
+.comprador {
+    display: none;
+}*/
+
+.slider-vantagens ul {
+    padding-left: 147px;
+}
+.advantege {
+}
+/*End Fourth section Vantagens ===========================================================================*/
+
+/*fourth section  ===========================================================================*/
+
+/*Artist*/
+.how-works-artist  .ball-1 {
+    background: url(../img/ball-1-artist.png);
+    background-size: 100%;
+    width: 205px;
+    background-repeat: no-repeat;
+    padding-top: 75px;
+    padding-bottom: 20px;
+    float: left;
+    height: 120px;
+    color: #fff;
+    text-align: center;
+    margin-left: 8px;
+    margin-top: -4px;
+}
+.how-works-artist  .ball-1 p {
+    width: 120px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 23px;
+}
+.how-works-artist  .ball-2 {
+    background: url(../img/ball-2-artist.png);
+    background-size: 100%;
+    width: 245px;
+    padding-top: 89px;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+    float: right;
+    height: 136px;
+    color: #fff;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: 29px;
+}
+.how-works-artist  .ball-2 p {
+    width: 195px;
+    margin: 0 auto;
+    line-height: 25px;
+}
+.how-works-artist .ball-3 {
+    background: url(../img/ball-3-artist.png);
+    background-size: 100%;
+    width: 302px;
+    background-repeat: no-repeat;
+    padding-top: 88px;
+    margin-left: 270px;
+    margin-top: -52px;
+    padding-bottom: 0px;    /* float: right; */
+    height: 233px;
+    color: #fff;
+    text-align: center;
+}
+.how-works-artist .ball-3 p {
+    width: 255px;
+    margin: 0 auto;
+    line-height: 27px;
+}
+.how-works-artist .ball-4 p span {
+    color: #f1592a;
+    font-size: 16px;
+    font-weight: bold;
+}
+.how-works-artist .ball-4 {
+    background: url(../img/ball-4-artist.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 214px;
+    padding-top: 81px;
+    padding-bottom: 20px;
+    /* float: left; */
+    height: 115px;
+    color: #fff;
+    text-align: center;
+    margin-top: 102px;
+    margin-left: 73px;
+}
+.how-works-artist .ball-4 p {
+    width: 163px;
+    line-height: 25px;
+    margin: 0 auto;
+}
+.how-works-artist .ball-5 {
+    background: url(../img/ball-5-artist.png);
+    background-size: 100%;
+    width: 245px;
+    padding-top: 67px;
+    padding-bottom: 20px;
+    float: left;
+    height: 149px;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    margin-left: 69%;
+    margin-top: -174px;
+}
+.how-works-artist .ball-5 p {
+    width: 157px;
+    line-height: 25px;
+    margin: 0 auto;
+}
+.third-section-artist {
+    background: url(../img/comoFuncionaArtista.png);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 114%;
+    min-height: 893px;
+    position: relative;
+}
+
+/*End artist*/
+
+/*End Fourth section*/
+
+/*Form*/
+.fomulario {
+    background: #000;
+    width: 100%;
+    height: 351px;
+    text-align: center;
+    padding-top: 35px;
+    /* position: relative; */
+}
+.fomulario h2 {
+    margin-top: 29px;
+    line-height: 20px;
+}
+.content-form {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    font-family: "allerbold", Arial, Tahoma, Sans-serif;
+}
+#formContact {
+    margin-top: 38px;
+    width: 100%;
+    height: auto;
+    background: #000;
+}
+.completName {
+    margin-top: 30px;
+    margin-bottom: 14px;
+    padding-top: 48px;
+    padding-bottom: 34px;
+    width: 97%;
+    margin: 0 auto;
+}
+.completName #sec-name,
+.completName #sec-sobName {
+    width: 49%;
+    float: left;
+}
+.completName #sec-name {
+    margin-right: 2%;
+}
+.completName #sec-name input, 
+.completName #sec-sobName input {
+    height: 33px;
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+    
+}
+label.error {
+    line-height: 30px;
+}
+.completName #sec-Sobname {
+    float: right;
+}
+
+.campo {
+    width: 97%;
+    margin: 0 auto;
+}
+#nomeArtisticoBanda {
+    display: none;
+}
+
+.input#email,
+#nomeArtisticoBanda {
+    width: 100%;
+    margin-top: 4px;
+    box-sizing: border-box;
+    height: 33px;
+}
+.input {
+    height: 25px;
+}
+#send {
+    background: url(../img/continue.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: transparent;
+    width: 230px;
+    height: 43px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+.check-sec {
+    width: 97%;
+    margin: 0 auto;
+}
+.check-sec .check:last-child {
+    margin-left: 17px;
+}
+/*.check-sec .check {
+    display: none;
+}*/
+.check-sec label i {
+    padding-left: 5px;
+    vertical-align: middle;
+    float: right;
+    padding-top: 2px;
+}
+.check-sec label input[type='radio'] {
+    -webkit-appearance:none;
+    width: 18px;
+    height: 18px;
+    border-radius:50%;
+    outline:none;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+    background-color: #fff;
+    /* vertical-align: sub; */
+}
+.check-sec label input[type='radio']:before {
+    content:'';
+    display:block;
+    width:60%;
+    height:60%;
+    margin: 20% auto;    
+    border-radius:50%;    
+}
+.check-sec label input[type='radio']:checked:before {
+    background: #000;
+}
+
+
+
+
+.check-sec label {
+    margin-left: 8px;
+}
+
+.check-banda, .check-contratar {
+    float: left;
+    width: 50%;
+}
+
+.check-banda label {
+    margin-left: -5px;
+    float: left;
+}
+.check-contratar label {
+    float: left;
+    margin-left: 1px;
+}
+
+/*End form*/
+
+/*AnimaÃƒÂ§ÃƒÂ£o da para o envio do formulario*/
+.modal-load {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    background: rgba(0,0,0,0.9);
+    text-align: center;
+    font-family: "allerbold", Arial, Tahoma, Sans-serif;
+    color: #fff;
+}
+.spinner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 80px;
+    margin: auto;
+    width: 235px;
+}
+
+
+.spinner > div {
+  background-color: #FFF;
+  height: 100%;
+  width: 14px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+/*AnimaÃƒÂ§ÃƒÂ£o da para o envio do formulario*/
+
+/*  =========================================================================== Medias ===========================================================================*/
+
+/*For a best view in Tablet*/
+@media (max-width:793px) {
+
+    /*Menu ===========================================================================*/
+    .header-top .menu-desk ul {
+        height: 46px;
+        padding: 0;
+    }
+    .header-top .menu-desk ul li {
+        height: 100%;
+    }
+
+    /*logo*/
+    .header-top .menu-desk ul li:first-child {
+        text-align: center;
+        margin-top: 0;
+        border-right: solid 2px #393b3c;
+    }
+    .header-top .menu-desk ul li:first-child a {
+        padding-left: 0;
+    }
+    .header-top .menu-desk ul li #logo-menu {
+        width: 94px;
+        margin-top: 10px;
+    }
+    .header-top .menu-desk ul li:last-child {
+        text-align: center;
+        width: 11%;
+        border-left: solid 2px #393b3c;
+    }
+    .header-top .menu-desk ul li:last-child a {
+        padding: 0;
+        font-size: 0;
+        text-align: center;
+    }
+    .header-top .menu-desk .sub-menu-desk li:last-child a {
+        font-size: 15px;
+    }
+    .header-top .menu-desk .sub-menu-desk {
+        padding: 0;
+        height: 42px;
+    }
+    .header-top .menu-desk #cadastrarTop {
+        margin-right: -9px;
+        margin-top: 7px;
+        width: 35px;
+    }
+    .header-top .menu-desk ul li {
+        width: 22%;
+    }
+    .header-top .menu-desk .sub-menu-desk li:first-child,
+    .header-top .menu-desk .sub-menu-desk li:last-child {
+        border:  none;
+    }
+    /*Fim Menu  ===========================================================================*/
+
+    /*First section  ===========================================================================*/
+    .first-section {
+        padding-top: 100px;
+        background: url(../img/firstSectionMobile.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: auto;
+        min-height: 0px;
+    }
+    .call {
+        padding-bottom: 86%;
+        font-size: 40px;
+    }
+    .call-mensa {
+        width: 472px;
+        margin: 0 auto;
+    }
+    .call-mensa p {
+        font-size: 15px;
+    }
+    .call #cadastroBtn {
+        width: 120px;
+        padding: 17px;
+    }
+
+    /*End first section  ===========================================================================*/
+
+    /*second section /  O que ÃƒÆ’Ã‚Â© ===========================================================================*/
+    #index-2 {
+        top: -44px;
+    }
+    #index-3 {
+        top: -45px;
+    }
+    .second-section {
+        background: url(../img/oQueEmobile.jpg);
+        margin-top: -300px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 897px;
+        height: 500px;
+    }
+    .whats-is h2,
+    .whats-is p, 
+    .choice {
+        display: block;
+    }
+    .whats-is {
+        padding-top: 292px;
+        max-width: 531px;
+        width: 100%;
+    }
+    .whats-is h2 {
+        padding-top: 22px;
+        margin-bottom: 26px;
+    }
+    .whats-is p {
+
+    }
+
+    .whats-is p:nth-child(n+2) {
+        line-height: 19px;
+        margin-top: 9px;
+    }
+    .choice {
+        margin-top: -53px;
+    }
+    .choice .stage {
+        display: block;
+        width: 100%;
+    }
+    .im-artist a, .want-hire a {
+        width: 190px;
+        display: block;
+    }
+    .want-hire img {
+        width: 30px;
+        padding-left: 65px;
+        padding-top: 21px;
+        float: none;
+    }
+    .im-artist a {
+    }
+    .im-artist img {
+        position: absolute;
+        padding-left: 46px;
+        padding-top: 45px;
+    }
+    .im-artist {
+        padding-left: 7%;
+        width: 43%;
+    }
+    /*End second section / O que ÃƒÆ’Ã‚Â© ===========================================================================*/
+
+    /* Third Section how works ===========================================================================*/
+    .how-works h2 {
+        padding-bottom: 949px;
+    }
+    .third-section {
+        background: url(../img/comoFuncionaCompradorMobile.png);
+        min-height: 0;
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+    }
+    .ball {
+        display: block;
+    }
+    .ball-1, .ball-2, .ball-3, .ball-4 {
+        float: none;
+        margin: 0;
+    }
+    .ball-1 {
+        position: absolute;
+        right: 31px;
+        top: 75px;
+    }
+    .ball-2 {
+        position: absolute;
+        top: 100px;
+        left: 41px;
+    }
+    .ball-3 {
+        position: absolute;
+        right: 101px;
+        top: 352px;
+    }
+    .ball-4 {
+        position: absolute;
+        top: 400px;
+    }
+
+    /*Artist =========================*/
+    .how-works-artist {
+        width: 100%;
+        max-width: 624px;
+        margin: 0 auto;
+        padding-bottom: 25px;
+        position: relative;
+    }
+    .third-section-artist {
+        background: url(../img/comoFuncionaArtistaMobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 0;
+        height: auto;
+        /* padding-bottom: 112%; */
+    }
+    .how-works-artist .ball-1, .how-works-artist .ball-2, .how-works-artist .ball-3, .how-works-artist .ball-4, .how-works-artist .ball-5 {
+        float: none;
+        position: absolute;
+    }
+    .how-works-artist .ball-1 {
+        right: 64%;
+        padding-top: 75px;
+        top: 157px;
+        margin-top: 100px;
+    }
+    .how-works-artist .ball-2 {
+        left: inherit;
+        right: -1px;
+        top: 94px;
+        margin-top: 100px;
+    }
+    .how-works-artist .ball-3 {
+        right: 27%;
+        top: 359px;
+        margin-top: 100px;
+    }
+    .how-works-artist .ball-4 {
+        top: 630px;
+        right: 55%;
+        margin-top: -76px;
+    }
+    .how-works-artist .ball-5 {
+        top: 597px;
+        right: 0%;
+        margin-top: -18px;
+    }
+
+    /* End Artist =========================*/
+
+    /* End Third Section / Como Funciona ===========================================================================*/
+
+    /*Fourth section / Vantagens ===========================================================================*/
+    .owl-carousel {
+        display: block;
+        padding-top: 8%;
+        float: left;
+    }
+    .fourth-section {
+        background: url(../img/vantagens-mobile-sem-vetor.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: auto;
+        padding-bottom: 70%;
+        min-height: 0;
+        width: 100%;
+    }
+    .fourth-section h2 {
+        /* text-align: center; */
+        /* right: inherit; */
+        padding-top: 33%;
+        margin: 0 auto;
+        float: left;
+        width: 100%;
+        text-align: center;
+        /* left: 0; */
+    }
+    .advantege {
+        /* max-width: 500px; */
+        width: 100%;
+        margin: 0 auto;
+        float: left;
+        margin-top: -296px;
+        text-align: center;
+    }
+    /*Comprador*/
+    .comprador {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .slider-vantagens ul {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .slider-vantagens ul li:after {
+        display: none;
+        line-height: 10px;
+    }
+    .slider-vantagens ul li:before {
+        content: "•";
+        font-size: 22px;
+        padding-right: 10px;
+        vertical-align: middle;
+    }
+
+    /*Artista*/
+    .artista {
+        text-align: center;
+        width: 100%; 
+        margin: 0 auto;
+    }
+
+    /*End Fourth section / Vantagens ===========================================================================*/
+
+
+    /*footer  ===========================================================================*/
+
+    /*footer  ===========================================================================*/
+}
+
+/*For a best view in Mobile*/
+@media (max-width:594px) {
+
+    /*Menu*/
+    .menu-desk {
+        display: none;
+    }
+    .menu-mobile {
+        display: block;
+        width: 100%;
+        background-color: #000;
+        text-align: center;
+        position: fixed;
+    }
+    .header-mobile {
+        height: 38px;
+    }
+    .btn-menu {
+        width: 20%;
+        float: left;
+        border-right: solid 1px #393b3c;
+        height: 100%;
+        line-height: 43px;
+    }
+    .duvidas-mobile {
+        width: 19%;
+        float: left;
+        border-left: solid 1px #393b3c;
+        height: 100%;
+        line-height: 46px;
+    }
+    .btn-menu img {
+        width: 32px;
+    }
+    .duvidas-mobile img {
+        width: 30px;
+        padding-top: 7px;
+        /* margin: 0 auto; */
+        /* display: block; */
+        /* text-align: center; */
+    }
+    .logo-mobile {
+        width: 60%;
+        float: left;
+        line-height: 35px;
+    }
+    .logo-mobile img {
+        width: 81px;
+        padding-top: 8px;
+    }
+    .options-menu-mobile {
+        display: none;
+        width: 100%;
+    }
+    
+    .options-menu-mobile li {
+        background-color: #363636;
+        width: 100%;
+        text-align: center;
+        border-bottom: solid 1px #5c5c5c;
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+    .options-menu-mobile li:last-child {
+        border: none;
+    }
+    .options-menu-mobile li a {
+        color: #fff;
+        display: inline-block;
+        font-family: "allerbold", Arial, Tahoma, Sans-serif;
+        font-weight: 100;
+        text-align: center;
+        width: 100%;
+        text-decoration: none;
+        font-size: 13px;
+    }
+    .sub-menu-mobile {
+        display: none;
+        margin-top: 11px;
+    }
+    
+    .sub-active {
+        padding-bottom: 0px;
+
+    }
+    .sub-active ul li {
+        background: #2b2b2b;
+        border: none;
+    }
+
+    /*BotÃƒÆ’Ã‚Â£o do menu mobile*/
+    .line {
+        background: #fff;
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        margin: 0 auto;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        width: 31px;
+        height: 3px;
+        -webkit-transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+        bottom]:0;
+    }
+    .line::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #fff;
+        right: 0;
+        top: -8px;
+        -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+        -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+        transition: transform .3s, top .3s, background-color 0s;
+    }
+    .line::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #fff;
+        right: 0;
+        top: 8px;
+        -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+        -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+        transition: transform .3s, top .3s, background-color 0s;
+    }
+    .control-nav {
+        display: block;
+        position: relative;
+        z-index: 20;
+        cursor: pointer;
+        width: 20%;
+        height: 100%;
+        float: left;
+        z-index: 10;
+        border-right: solid 1px #393b3c;
+    }
+    .is-clicked {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .is-clicked::before {
+        top: 0;
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+    .is-clicked::after {
+        top: 0;
+        -webkit-transform: rotate(225deg);
+        -moz-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        -o-transform: rotate(225deg);
+        transform: rotate(225deg);
+    }
+    .is-container-nav ul li a {
+        color: #FFF;
+    }
+
+    /*Fim botÃƒÆ’Ã‚Â£o mobile*/
+
+    /*Fim menu*/
+
+    /*First section*/
+    .first-section {
+        padding-top: 10%;
+    }
+    .call {
+        font-size: 21px;
+    }
+    .call img {
+        margin-top: 20px;
+        width: 40%;
+    }
+    .call-mensa {
+        width: 302px;
+        margin-top: 9px;
+    }
+    .call-mensa p {
+        font-size: 13px;
+        padding-top: 0;
+        line-height: 16px;
+    }
+    .call #cadastroBtn {
+        width: 113px;
+        padding: 13px 17px 11px 17px;
+        margin-top: 22px;
+        font-size: 16px;
+        margin-bottom: 69px;
+    }
+    /*End first section*/
+
+    /*Second section / O que ÃƒÆ’Ã‚Â© ===========================================================================*/
+    #index-2 {
+        top: -16px;
+    }
+    #index-3 {
+        top: -23px;
+    }
+    .second-section {
+        min-height: 685px;
+        margin-top: -206px;
+    }
+    .whats-is {
+        padding-top: 204px;
+        max-width: 310px;
+    }
+    .whats-is h2 {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+    .whats-is p {
+        font-size: 13px;
+    }
+    .whats-is p:nth-child(n+2) {
+        line-height: 20px;
+    }
+    .im-artist {
+        padding-left: 7%;
+        width: 42%;
+    }
+    .im-artist a, .want-hire a {
+        font-size: 16px;
+        width: 116px;
+    }
+    .want-hire img {
+        width: 20px;
+        padding-left: 33px;
+        padding-top: 21px;
+        float: none;
+    }
+    .im-artist a {
+    }
+    .im-artist img {
+        position: absolute;
+        padding-left: 28px;
+        padding-top: 38px;
+        width: 20px;
+    }
+    .choice {
+        margin-top: -67px;
+    }
+
+    /*End second section / O que ÃƒÆ’Ã‚Â© ===========================================================================*/
+
+    /* Third Section / Como Funciona ===========================================================================*/
+    .third-section {
+        height: auto;
+        min-height: 0;
+        padding-bottom: 145%;
+        background-position: center center;
+    }
+    .how-works {
+        width: 100%;
+        position: relative;
+        max-width: 400px;
+    }
+    .how-works h2 {
+        font-size: 25px;
+        padding-bottom: 0;
+    }
+    .ball-1 {
+        width: 120px;
+        top: 135px;
+        padding-top: 29px;
+        height: auto;
+    }
+    .ball-1 p {
+        font-size: 13px;
+        width: 100px;
+    }
+    .ball-2 {
+        width: 128px;
+        padding-top: 39px;
+        left: 17px;
+        top: 69px;
+        height: auto;
+        padding-bottom: 33px;
+    }
+    .ball-2 p {
+        font-size: 13px;
+        width: 96px;
+    }
+    .ball-3 {
+        width: 118px;
+        right: 22px;
+        padding-top: 23px;
+    }
+    .ball-3 p {
+        font-size: 13px;
+        width: 97px;
+    }
+    .ball-3 p span {
+        font-size: 14px;
+    }
+    .ball-4 {
+        width: 167px;
+        top: 207px;
+        left: 8px;
+        padding-top: 29px;
+        padding-bottom: 36px;
+        height: auto;
+    }
+    .ball-4 p {
+        font-size: 13px;
+        width: 147px;
+    }
+
+    /*Artista*/
+    .how-works-artist .ball-1 p, .how-works-artist .ball-2 p, .how-works-artist .ball-3 p, .how-works-artist .ball-4 p, .how-works-artist .ball-5 p {
+        font-size: 13px;
+    }
+    .how-works-artist .ball-1 p {
+        width: 100px;
+    }
+    .how-works-artist .ball-2 p {
+        width: 103px;
+    }
+    .how-works-artist .ball-3 p {
+        width: 200px;
+        line-height: 18px;
+    }
+    .how-works-artist .ball-4 p {
+        width: 133px;
+    }
+    .how-works-artist .ball-5 p {
+        width: 153px;
+        line-height: 16px;
+    }
+    .how-works-artist .ball-1 {
+        width: 128px;
+        height: auto;
+        top: 152px;
+        left: 5%;
+        padding-top: 35px;
+        margin-top: 0;
+    }
+    .how-works-artist .ball-2 {
+        width: 112px;
+        height: auto;
+        padding-top: 18px;
+        top: 100px;
+        right: 10px;
+        margin-top: 0;
+    }
+    .how-works-artist .ball-3 {
+        width: 194px;
+        padding-top: 55px;
+        margin: 0;
+        top: 204px;
+        margin-top: 0;
+        right: 19%;
+    }
+    .how-works-artist .ball-4 {
+        width: 128px;
+        padding-top: 32px;
+        top: 466px;
+        left: -20%;
+        margin-top: -158px;
+    }
+    .how-works-artist .ball-5 {
+        width: 171px;
+        padding-top: 58px;
+        top: 494px;
+        line-height: 10px;
+        margin-top: -253px;
+        right: 10px;
+    }
+
+    /*End Artista*/
+
+    /* Third Section how works ===========================================================================*/
+
+  /*Fourth section / Vantagens ===========================================================================*/
+    .fourth-section {
+        padding-bottom: 51%;
+    }
+    .owl-carousel {
+        padding-top: 8%;
+    }
+    .vantagens-vetor {
+        position: absolute;
+    }
+
+    .fourth-section h2 {
+        padding-top: 38%;
+        font-size: 25px;
+    }
+
+    .advantege {
+        max-width: 300px;
+        display: block;
+        float: none;
+        margin: 0 auto;
+        padding-bottom: 42%;
+    }
+    
+    /*Comprador*/
+    .slider-vantagens ul {
+        margin: 0 auto;
+        padding: 0;
+        background: #fff;
+    }
+    .slider-vantagens ul li {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+    /*End Fourth section / Vantagens ===========================================================================*/
+
+    /*footer ================================================================*/
+    .completName #sec-name,
+    .completName #sec-sobName {
+        width: 100%;
+        margin-bottom: 11px;
+        box-sizing: border-box;
+    }
+    .completName, .campo {
+        width: 91%;
+    }
+    #nomeArtisticoBanda {
+        margin-top: 0;
+    }
+    #formContractor {
+        background: #000;
+
+    }
+    .check-sec {
+        width: 200px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .check-sec .check {
+        width: 100%;
+        margin: 0 auto;
+        height: 23px;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+    .check-banda, .check-contratar {
+        float: none;
+        width: 100%;
+    }
+    .check-banda label {
+        margin-left: 0;
+        float: none;
+    }
+    .check-contratar label {
+        float: none;
+        margin-left: 0;
+    }
+    .check-sec label {
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+        margin-bottom: 23px;
+        float: left;
+    }
+    
+    .input#name {
+        margin-right: 0;
+    }
+    .input#email {
+        margin-top: 10px;
+    }
+    #send {
+        padding-bottom: 70px;
+        width: 193px;
+        border-radius: 0;
+    }
+
+    .check-sec label i {
+        width: 100%;
+    }
+    .check-sec label input[type='radio'] {
+        width: 26px;
+        height: 26px;
+    }
+    /* End footer ================================================================*/
+}
+
+/*# sourceMappingURL=style.css.map */
